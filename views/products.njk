@@ -1,0 +1,19 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <img src={{image}}></img>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <h2>{{name}}</h2>
+        <h3>{{price}}</h3>
+        <div class="jauge">
+          <div style = "width : {{rating*20}}%"></div>
+        </div>
+        <p>{{description}}</p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+  <style>
+    [scope=row]{color:blue ; padding-top:-50px}
+  </style>
+  <div class="container">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Categories</th>
+        </tr>
+      </thead>
+    </table>
+    <table class="table table-striped">
+      <tbody>
+          {% for element in categories %}
+            <tr><th scope="row"><ul><a href="/categories/{{element.id}}">{{element.name}}</a></button></ul></th></tr>
+          {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}
